@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import { createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
+import styles from "@/styles.css?url";
 
 export const Route = createRootRoute({
   head: () => ({
@@ -13,6 +14,12 @@ export const Route = createRootRoute({
       },
       {
         title: "Starlight Archive",
+      },
+    ],
+    links: [
+      {
+        rel: "stylesheet",
+        href: styles,
       },
     ],
   }),
