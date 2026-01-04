@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import { createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
 import styles from "@/styles.css?url";
+import { AppProviders } from "@/components/providers";
 
 export const Route = createRootRoute({
   head: () => ({
@@ -28,12 +29,12 @@ export const Route = createRootRoute({
 
 function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
   return (
-    <html>
+    <html suppressHydrationWarning lang="en">
       <head>
         <HeadContent />
       </head>
       <body>
-        {children}
+        <AppProviders>{children}</AppProviders>
         <Scripts />
       </body>
     </html>
