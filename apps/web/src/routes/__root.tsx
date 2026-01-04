@@ -1,10 +1,5 @@
 import type { ReactNode } from "react";
-import {
-  Outlet,
-  createRootRoute,
-  HeadContent,
-  Scripts,
-} from "@tanstack/react-router";
+import { createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
 
 export const Route = createRootRoute({
   head: () => ({
@@ -17,20 +12,12 @@ export const Route = createRootRoute({
         content: "width=device-width, initial-scale=1",
       },
       {
-        title: "TanStack Start Starter",
+        title: "Starlight Archive",
       },
     ],
   }),
-  component: RootComponent,
+  shellComponent: RootDocument,
 });
-
-function RootComponent() {
-  return (
-    <RootDocument>
-      <Outlet />
-    </RootDocument>
-  );
-}
 
 function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
   return (
