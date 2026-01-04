@@ -4,7 +4,8 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "check-types": "bunx tsc --noEmit"
+    "check-types": "bunx tsc --noEmit",
+    "try": "bun run tests/try.ts"
   },
   "dependencies": {
     "neverthrow": "catalog:",
