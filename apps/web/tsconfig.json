@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "@repo/tsconfigs/base.json",
+  "compilerOptions": {
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "jsx": "react-jsx",
+    "verbatimModuleSyntax": false,
+
+    // Path aliases
+    "paths": {
+      "@/*": ["./src/*"],
+      "tests/*": ["./tests/*"]
+    }
+  },
+  "include": ["src/**/*", "tests/**/*", "vite.config.ts"]
+}
