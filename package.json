@@ -9,7 +9,8 @@
   "devDependencies": {
     "lefthook": "^2.0.13",
     "prettier": "3.7.4",
-    "prettier-plugin-curly": "0.4.1"
+    "prettier-plugin-curly": "0.4.1",
+    "prettier-plugin-tailwindcss": "0.7.2"
   },
   "workspaces": {
     "packages": [
