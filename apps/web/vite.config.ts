@@ -7,7 +7,11 @@ export default defineConfig({
   plugins: [
     tanstackStart(),
     // react's vite plugin must come after start's vite plugin
-    viteReact(),
+    viteReact({
+      babel: {
+        plugins: ["babel-plugin-react-compiler"],
+      },
+    }),
   ],
   resolve: {
     alias: {
